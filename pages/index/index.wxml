@@ -1,0 +1,20 @@
+<view class="container" catchtouchmove="noop">
+  <view class="hud" wx:if="{{showOverlay}}">
+    <view class="title">跳一跳</view>
+    <view class="subtitle" wx:if="{{!gameStarted}}">按住屏幕，松手起跳</view>
+    <button class="btn" bindtap="startGame" wx:if="{{!gameStarted}}">开始游戏</button>
+    <button class="btn" bindtap="restartGame" wx:if="{{gameOver}}">再来一次</button>
+    <view class="score" wx:if="{{gameOver}}">得分：{{score}}</view>
+  </view>
+  <view class="scoreTop" wx:if="{{gameStarted && !gameOver}}">{{score}}</view>
+  <canvas
+    type="2d"
+    id="gameCanvas"
+    canvas-id="gameCanvas"
+    disable-scroll="true"
+    bindtouchstart="onTouchStart"
+    bindtouchend="onTouchEnd"
+    bindtouchcancel="onTouchEnd"
+    style="width:100vw;height:100vh;display:block;"
+  ></canvas>
+</view>
