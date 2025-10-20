@@ -1,0 +1,24 @@
+{
+  "description": "WeChat Mini Program - 跳一跳",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "compileHotReLoad": true,
+    "useIsolateContext": true,
+    "useCompilerPlugins": ["typescript"],
+    "uglifyFileName": true,
+    "lazyloadPlaceholderEnable": true,
+    "condition": true
+  },
+  "appid": "touristappid",
+  "projectname": "jump-jump",
+  "libVersion": "latest",
+  "simulatorType": "wechat",
+  "condition": {}
+}
